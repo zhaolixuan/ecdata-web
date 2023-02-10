@@ -1,0 +1,41 @@
+#!/bin/bash
+
+city_env="${CITY_ENV}"
+help(){
+    return 0
+}
+checkhealth(){
+    return 0
+}
+start(){
+    # echo "city_evn ${city_env}" 
+    echo "start"
+    echo "def_app_name ${def_app_name}"
+    echo "def_instance_name ${def_instance_name}"
+    ln -sf /export/Instances/$def_app_name/$def_instance_name/runtime /export/Instances/"${city_env}"-html
+    #ln -sf /export/Instances/$def_app_name/$def_instance_name/runtime /export/Instances/foshan-html
+
+    return 0
+}
+
+stop(){
+    return 0
+}
+
+case "${1}" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status|health|checkhealth)
+        checkhealth
+        ;;
+    restart)
+        stop && start
+        ;;
+    *)
+        help
+        ;;
+esac

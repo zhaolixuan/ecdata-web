@@ -1,0 +1,107 @@
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.info-table {
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.table-deep {
+  background: transparent !important;
+}
+.table-easy {
+  background: #F7F8FB !important;
+}
+.el-table tbody tr:hover>td {
+  background:#F7F8FB !important;
+}
+.el-table__footer-wrapper, .el-table__header-wrapper {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.el-table td, .el-table th.is-leaf {
+  border-right: none !important;
+  border-bottom: none !important;
+}
+.el-table--border, .el-table--group {
+  border: none !important;
+}
+.el-table--border::after, .el-table--group::after, .el-table::before {
+  background-color: transparent !important;
+}
+.el-table__body tr.current-row>td {
+  background: rgba(53,121,255,0.78) !important;
+  box-shadow: inset 0 1px 13px 2px rgba(90, 93, 95, 0.61) !important;
+}
+.el-table .cell {
+  font-family: PingFang-SC-Medium;
+  font-size: 14px;
+  color: #49517F;
+}
+.el-table th, .el-table tr {
+  background-color: #EEF2FF;
+}
+
+.j-page-warp {
+  display: flex;
+  .el-button--primary {
+    background: #002C85;
+    border: 1px solid #3272FF;
+    color: #81A7FF;
+    width: 46px;
+    height: 3px;
+    padding: 0;
+    font-size: 12px;
+    border-radius: 0;
+  }
+  .el-button--primary:hover {
+    background: #699CFF;
+    border: 1px solid #4985F9;
+    color: #ffffff;
+  }
+  .font-style {
+    margin: 0 !important;
+    font-size: 14px !important;
+    color: #3F4656 !important;
+    letter-spacing: 0 !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    line-height: 26px !important;
+    border: 1px solid transparent !important;
+    border-radius: 0 !important;
+    margin-left: 12px !important;
+  }
+  .el-pager li {
+    .font-style;
+    background-color: transparent !important;
+  }
+  .btn-next, .btn-prev {
+    .font-style;
+    background: transparent !important;
+    color: #2D599D !important;
+  }
+  .btn-next:hover, .btn-prev:hover,  .btn-next.active, .btn-prev.active {
+    background: rgba(195,226,255,0.90) !important;
+    border: none !important;
+    color: #2D599D !important;
+  }
+  .el-pager li:hover {
+    background: transparent !important;
+    border: 1px solid #4B66FE !important;
+  }
+  .el-pager li.active {
+    background:  #4B66FE !important;
+    border: 1px solid transparent !important;
+    color: #ffffff !important;
+  }
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #4B66FE !important;
+  }
+}
+
+#app .el-table__body-wrapper {
+  height: auto !important;
+}
+.el-table__body, .el-table__footer, .el-table__header {
+  table-layout: auto !important;
+}
